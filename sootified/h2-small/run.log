@@ -1,0 +1,31 @@
+nice -n 19 java -Xmx4G -cp dacapo-9.12-bach.jar -javaagent:pia.jar Harness --scratch-directory /tmp/dacaposcratch h2 -s small
+=======================================================
+TamiFlex Play-In Agent Version 2.0.1
+Loaded properties from /home/lpxz/work/dacapo/pia.properties
+=======================================================
+Using scaled threading model. 8 processors detected, 8 threads used to drive the workload, in a possible range of [1,400]
+java.lang.reflect.InvocationTargetException
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.dacapo.harness.H2.preIteration(H2.java)
+	at org.dacapo.harness.Benchmark.run(Benchmark.java)
+	at org.dacapo.harness.TestHarness.runBenchmark(TestHarness.java)
+	at org.dacapo.harness.TestHarness.main(TestHarness.java)
+	at Harness.main(Harness.java)
+Caused by: java.lang.VerifyError: (class: org/h2/jdbc/JdbcResultSet, method: isAfterLast signature: ()Z) Register 0 contains wrong type
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java)
+	at org.apache.derbyTesting.system.oe.load.SimpleInsert.setRandomGenerator(SimpleInsert.java)
+	at org.apache.derbyTesting.system.oe.load.SimpleInsert.setupLoad(SimpleInsert.java)
+	at org.apache.derbyTesting.system.oe.load.ThreadInsert.setupLoad(ThreadInsert.java)
+	at org.dacapo.h2.TPCC.loadData(TPCC.java)
+	at org.dacapo.h2.TPCC.preIterationMemoryDB(TPCC.java)
+	at org.dacapo.h2.TPCC.preIteration(TPCC.java)
+	... 9 more
+
+=======================================================
+TamiFlex Play-In Agent Version 2.0.1
+Replaced 984 out of 1001 classes.
+=======================================================

@@ -1,0 +1,6 @@
+1 dump-all: dump the reflection calls into out/
+2 process-all: use the dumped information for soot analysis, and output the transformed classes to sootified/
+3 run-all: use the transformed classes for running.
+
+
+Note: from-other.sh will run with the transformed classes stored in eclipse/workspacePA_icse/soot-One/sootOutput.

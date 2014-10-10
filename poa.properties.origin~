@@ -1,0 +1,14 @@
+dontDumpClasses = false
+dontNormalize = false
+count = false
+useDeclaredTypes = false
+verbose = false
+transformations =\
+			de.bodden.tamiflex.playout.transformation.clazz.ClassForNameTransformation \
+			de.bodden.tamiflex.playout.transformation.clazz.ClassNewInstanceTransformation \
+			de.bodden.tamiflex.playout.transformation.constructor.ConstructorNewInstanceTransformation \
+			de.bodden.tamiflex.playout.transformation.field.FieldGetTransformation \
+			de.bodden.tamiflex.playout.transformation.field.FieldSetTransformation \
+			de.bodden.tamiflex.playout.transformation.method.MethodInvokeTransformation \
+			
+
